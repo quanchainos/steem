@@ -58,8 +58,10 @@ int main(int argc, char** argv) {
       std::cerr << "------------------------------------------------------\n";
 #else
       std::cerr << "------------------------------------------------------\n\n";
-      std::cerr << "            STARTING STEEM NETWORK\n\n";
+      std::cerr << "            STARTING QUAN NETWORK\n\n";
       std::cerr << "------------------------------------------------------\n";
+      auto initminer_private_key = graphene::utilities::key_to_wif( STEEMIT_INIT_PRIVATE_KEY );
+      std::cerr << "initminer private key: " << initminer_private_key << "\n";
       std::cerr << "initminer public key: " << STEEMIT_INIT_PUBLIC_KEY_STR << "\n";
       std::cerr << "chain id: " << std::string(STEEMIT_CHAIN_ID) << "\n";
       std::cerr << "blockchain version: " << fc::string( STEEMIT_BLOCKCHAIN_VERSION ) << "\n";
